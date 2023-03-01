@@ -2,6 +2,13 @@
   "Print a message when a MODE is loaded."
   (message (concat "Linguist: Loaded " mode ".")))
 
+(use-package elixir-mode
+  :config (linguist--loaded-message "elixir-mode")
+  :mode ("mix\\.lock" . elixir-mode)
+  :mode ("\\.exs\\'" . elixir-mode)
+  :mode ("\\.ex\\'" . elixir-mode)
+  :mode ("\\.elixir\\'" . elixir-mode))
+
 (use-package yaml-mode
   :config (linguist--loaded-message "yaml-mode")
   :mode ("\\.\\(e?ya?\\|ra\\)ml\\'" . yaml-mode))
