@@ -1,6 +1,7 @@
 ;;; linguist.el --- A language modes pack for Emacs
 
 ;; URL: https://github.com/jeffkreeftmeijer/linguist.el
+;; Package-Requires: (use-package dockerfile-mode elixir-mode git-modes ledger-mode markdown-mode nix-mode yaml-mode)
 
 ;;; Commentary:
 
