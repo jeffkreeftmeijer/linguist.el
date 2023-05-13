@@ -157,6 +157,18 @@ Linguist is a language modes pack for Emacs, inspired by [[https://github.com/sh
     :mode ("^/nix/store/.+\\.drv\\'" . nix-drv-mode))
 #+end_src
 
+** [[https://github.com/rust-lang/rust-mode][rust-mode]]
+:PROPERTIES:
+:CUSTOM_ID: rust-mode
+:END:
+
+#+begin_src emacs-lisp :tangle linguist.el
+  (use-package rust-mode
+    :config (linguist--loaded-message "rust-mode")
+    :ensure t
+    :mode ("\\.rs\\'" . rust-mode)
+#+end_src
+
 ** [[https://github.com/yoshiki/yaml-mode][yaml-mode]]
 :PROPERTIES:
 :CUSTOM_ID: yaml-mode

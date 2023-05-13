@@ -74,6 +74,11 @@
   :mode ("\\.nix\\'" . nix-mode)
   :mode ("^/nix/store/.+\\.drv\\'" . nix-drv-mode))
 
+(use-package rust-mode
+  :config (linguist--loaded-message "rust-mode")
+  :ensure t
+  :mode ("\\.rs\\'" . rust-mode)
+
 (use-package yaml-mode
   :config (linguist--loaded-message "yaml-mode")
   :ensure t
