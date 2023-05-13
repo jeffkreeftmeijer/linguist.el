@@ -14,6 +14,11 @@
   "Print a message when a MODE is loaded."
   (message (concat "Linguist: Loaded " mode ".")))
 
+(use-package beancount-mode
+  :config (linguist--loaded-message "beancount-mode")
+  :ensure t
+  :mode ("\\.beancount\\'" . beancount-mode)
+
 (use-package dockerfile-mode
   :config (linguist--loaded-message "dockerfile-mode")
   :ensure t

@@ -34,6 +34,18 @@ Linguist is a language modes pack for Emacs, inspired by [[https://github.com/sh
 :CUSTOM_ID: language-packs
 :END:
 
+** [[https://github.com/beancount/beancount-mode][beancount-mode]]
+:PROPERTIES:
+:CUSTOM_ID: beancount-mode
+:END:
+
+#+begin_src emacs-lisp :tangle linguist.el
+  (use-package beancount-mode
+    :config (linguist--loaded-message "beancount-mode")
+    :ensure t
+    :mode ("\\.beancount\\'" . beancount-mode)
+#+end_src
+
 ** [[https://github.com/spotify/dockerfile-mode][dockerfile-mode]]
 :PROPERTIES:
 :CUSTOM_ID: dockerfile-mode
