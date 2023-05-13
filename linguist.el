@@ -16,11 +16,13 @@
 
 (use-package dockerfile-mode
   :config (linguist--loaded-message "dockerfile-mode")
+  :ensure t
   :mode ("\\.dockerfile\\'" . dockerfile-mode)
   :mode ("[/\\]\\(?:Containerfile\\|Dockerfile\\)\\(?:\\.[^/\\]*\\)?\\'" . dockerfile-mode))
 
 (use-package elixir-mode
   :config (linguist--loaded-message "elixir-mode")
+  :ensure t
   :mode ("mix\\.lock" . elixir-mode)
   :mode ("\\.exs\\'" . elixir-mode)
   :mode ("\\.ex\\'" . elixir-mode)
@@ -28,12 +30,14 @@
 
 (use-package git-modes
   :config (linguist--loaded-message "gitattributes-mode")
+  :ensure t
   :mode ("/git/attributes\\'" . gitattributes-mode)
   :mode ("/info/attributes\\'" . gitattributes-mode)
   :mode ("/\\.gitattributes\\'" . gitattributes-mode))
 
 (use-package git-modes
   :config (linguist--loaded-message "gitconfig-mode")
+  :ensure t
   :mode ("/etc/gitconfig\\'" . gitconfig-mode)
   :mode ("/\\.gitmodules\\'" . gitconfig-mode)
   :mode ("/git/config\\'" . gitconfig-mode)
@@ -43,26 +47,31 @@
 
 (use-package git-modes
   :config (linguist--loaded-message "gitignore-mode")
+  :ensure t
   :mode ("/git/ignore\\'" . gitignore-mode)
   :mode ("/info/exclude\\'" . gitignore-mode)
   :mode ("/\\.gitignore\\'" . gitignore-mode))
 
 (use-package ledger-mode
   :config (linguist--loaded-message "ledger-mode")
+  :ensure t
   :mode ("\\.ledger\\'" . ledger-mode))
 
 (use-package markdown-mode
   :config (linguist--loaded-message "markdown-mode")
+  :ensure t
   :mode ("\\.\\(?:md\\|markdown\\|mkd\\|mdown\\|mkdn\\|mdwn\\)\\'" . markdown-mode)
   :mode ("\\.mdx\\'" . markdown-mode))
 
 (use-package nix-mode
   :config (linguist--loaded-message "nix-mode")
+  :ensure t
   :mode ("\\.nix\\'" . nix-mode)
   :mode ("^/nix/store/.+\\.drv\\'" . nix-drv-mode))
 
 (use-package yaml-mode
   :config (linguist--loaded-message "yaml-mode")
+  :ensure t
   :mode ("\\.\\(e?ya?\\|ra\\)ml\\'" . yaml-mode))
 
 (provide 'linguist)

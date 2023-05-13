@@ -42,6 +42,7 @@ Linguist is a language modes pack for Emacs, inspired by [[https://github.com/sh
 #+begin_src emacs-lisp :tangle linguist.el
   (use-package dockerfile-mode
     :config (linguist--loaded-message "dockerfile-mode")
+    :ensure t
     :mode ("\\.dockerfile\\'" . dockerfile-mode)
     :mode ("[/\\]\\(?:Containerfile\\|Dockerfile\\)\\(?:\\.[^/\\]*\\)?\\'" . dockerfile-mode))
 #+end_src
@@ -54,6 +55,7 @@ Linguist is a language modes pack for Emacs, inspired by [[https://github.com/sh
 #+begin_src emacs-lisp :tangle linguist.el
   (use-package elixir-mode
     :config (linguist--loaded-message "elixir-mode")
+    :ensure t
     :mode ("mix\\.lock" . elixir-mode)
     :mode ("\\.exs\\'" . elixir-mode)
     :mode ("\\.ex\\'" . elixir-mode)
@@ -68,6 +70,7 @@ Linguist is a language modes pack for Emacs, inspired by [[https://github.com/sh
 #+begin_src emacs-lisp :tangle linguist.el
   (use-package git-modes
     :config (linguist--loaded-message "gitattributes-mode")
+    :ensure t
     :mode ("/git/attributes\\'" . gitattributes-mode)
     :mode ("/info/attributes\\'" . gitattributes-mode)
     :mode ("/\\.gitattributes\\'" . gitattributes-mode))
@@ -81,6 +84,7 @@ Linguist is a language modes pack for Emacs, inspired by [[https://github.com/sh
 #+begin_src emacs-lisp :tangle linguist.el
   (use-package git-modes
     :config (linguist--loaded-message "gitconfig-mode")
+    :ensure t
     :mode ("/etc/gitconfig\\'" . gitconfig-mode)
     :mode ("/\\.gitmodules\\'" . gitconfig-mode)
     :mode ("/git/config\\'" . gitconfig-mode)
@@ -97,6 +101,7 @@ Linguist is a language modes pack for Emacs, inspired by [[https://github.com/sh
 #+begin_src emacs-lisp :tangle linguist.el
   (use-package git-modes
     :config (linguist--loaded-message "gitignore-mode")
+    :ensure t
     :mode ("/git/ignore\\'" . gitignore-mode)
     :mode ("/info/exclude\\'" . gitignore-mode)
     :mode ("/\\.gitignore\\'" . gitignore-mode))
@@ -110,6 +115,7 @@ Linguist is a language modes pack for Emacs, inspired by [[https://github.com/sh
 #+begin_src emacs-lisp :tangle linguist.el
   (use-package ledger-mode
     :config (linguist--loaded-message "ledger-mode")
+    :ensure t
     :mode ("\\.ledger\\'" . ledger-mode))
 #+end_src
 
@@ -121,6 +127,7 @@ Linguist is a language modes pack for Emacs, inspired by [[https://github.com/sh
 #+begin_src emacs-lisp :tangle linguist.el
   (use-package markdown-mode
     :config (linguist--loaded-message "markdown-mode")
+    :ensure t
     :mode ("\\.\\(?:md\\|markdown\\|mkd\\|mdown\\|mkdn\\|mdwn\\)\\'" . markdown-mode)
     :mode ("\\.mdx\\'" . markdown-mode))
 #+end_src
@@ -133,6 +140,7 @@ Linguist is a language modes pack for Emacs, inspired by [[https://github.com/sh
 #+begin_src emacs-lisp :tangle linguist.el
   (use-package nix-mode
     :config (linguist--loaded-message "nix-mode")
+    :ensure t
     :mode ("\\.nix\\'" . nix-mode)
     :mode ("^/nix/store/.+\\.drv\\'" . nix-drv-mode))
 #+end_src
@@ -145,6 +153,7 @@ Linguist is a language modes pack for Emacs, inspired by [[https://github.com/sh
 #+begin_src emacs-lisp :tangle linguist.el
   (use-package yaml-mode
     :config (linguist--loaded-message "yaml-mode")
+    :ensure t
     :mode ("\\.\\(e?ya?\\|ra\\)ml\\'" . yaml-mode))
 #+end_src
 
@@ -179,18 +188,20 @@ Then, open the help page for =auto-mode-alist= (=C-h= =v= auto-mode-alist =<RET>
 Take all pattern lines corresponding to the new package and add them as =:mode=​s in a call to =use-package=:
 
 #+begin_src emacs-lisp
-(use-package yaml-mode
-  :config (linguist--loaded-message "yaml-mode")
-  :mode ("\\.\\(e?ya?\\|ra\\)ml\\'" . yaml-mode))
+  (use-package yaml-mode
+    :config (linguist--loaded-message "yaml-mode")
+    :ensure t
+    :mode ("\\.\\(e?ya?\\|ra\\)ml\\'" . yaml-mode))
 #+end_src
 
 If the package has multiple pattern lines, add a =:mode= for each:
 
 #+begin_src emacs-lisp
-(use-package elixir-mode
-  :config (linguist--loaded-message "elixir-mode")
-  :mode ("mix\\.lock" . elixir-mode)
-  :mode ("\\.exs\\'" . elixir-mode)
-  :mode ("\\.ex\\'" . elixir-mode)
-  :mode ("\\.elixir\\'" . elixir-mode))
+  (use-package elixir-mode
+    :config (linguist--loaded-message "elixir-mode")
+    :ensure t
+    :mode ("mix\\.lock" . elixir-mode)
+    :mode ("\\.exs\\'" . elixir-mode)
+    :mode ("\\.ex\\'" . elixir-mode)
+    :mode ("\\.elixir\\'" . elixir-mode))
 #+end_src
